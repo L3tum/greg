@@ -1,13 +1,19 @@
 {
     "name": "sentence-id",
     "description": "Unique, memorable ids for your Node app",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "Linus G Thiel <linus@hanssonlarsson.se>",
-    "contributors": [
-    ],
+    "contributors": [],
     "dependencies": {},
-    "keywords": ["word", "id", "generator", "error code"],
-    "engines": { "node": ">= 0.2.0" },
+    "keywords": [
+        "word",
+        "id",
+        "generator",
+        "error code"
+    ],
+    "engines": {
+        "node": ">= 0.2.0"
+    },
     "repository": {
         "type": "git",
         "url": "http://github.com/linus/greg.git"
