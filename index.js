@@ -1,5 +1,7 @@
 // Generate a Greg sentence
-exports.sentence = function sentence() {
+exports.sentence = function sentence(separator, max) {
+    separator = separator || "-";
+    max = max || 510;
     function random(max) {
         return Math.floor(Math.random() * max);
     }
@@ -8,13 +10,13 @@ exports.sentence = function sentence() {
         return array[random(array.length)];
     }
 
-    var count       = random(33) + 2,
+    var count       = random(max) + 2,
         adjective   = randomItem(exports.adjectives),
         noun        = randomItem(exports.nouns),
         verb        = randomItem(exports.verbs),
         adverb      = randomItem(exports.adverbs);
 
-    return [count, adjective, noun, verb, adverb].join(" ");
+    return [count, adjective, noun, verb, adverb].join(separator);
 };
 
 // Parse a Greg sentence and return it's corresponding id
