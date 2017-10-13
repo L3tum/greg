@@ -15,10 +15,8 @@ exports.sentence = function sentence(separator, max) {
         noun        =   randomItem(exports.nouns),
         verb        =   randomItem(exports.verbs),
         adverb      =   randomItem(exports.adverbs),
-        bytes       =   require('crypto').randomBytes(16, function(err, buffer) {
-                          var token = buffer.toString('hex');
-                        });
-
+        bytes       =   crypto.randomBytes(8).toString('hex');
+        
     return [count, adjective, noun, verb, adverb, bytes].join(separator);
 };
 
